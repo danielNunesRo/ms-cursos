@@ -10,11 +10,11 @@ public class LoginListenerService {
 
     @RabbitListener(queues = "${rabbitmq.queue.login.cursos}")
     public void tokenConsumer(String tokenRecebido) {
-        this.token = tokenRecebido; // Armazena o token recebido
+        this.token = tokenRecebido;
         System.out.println("Token recebido da fila RabbitMQ: " + token);
     }
 
     public String getToken() {
-        return this.token; // Método para recuperar o token armazenado
+        return this.token;
     }
 }
