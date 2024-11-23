@@ -11,7 +11,7 @@ public class LoginListenerService {
     @RabbitListener(queues = "${rabbitmq.queue.login.cursos}")
     public void tokenConsumer(String tokenRecebido) {
         this.token = tokenRecebido;
-        System.out.println("Token recebido da fila RabbitMQ: " + token);
+        System.out.println("Token recebido com sucesso");
     }
 
     public String getToken() {
